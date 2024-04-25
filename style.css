@@ -89,9 +89,10 @@ main {
     margin-top: 1.5rem;
   }
 }
+
 .blog-preview-card:hover {
   box-shadow: 1rem 1rem var(--neutral-black);
-  cursor: url(./assets/images/cursor.svg), pointer;
+  cursor: pointer;
 }
 
 .blog-preview-card:hover h2 {

@@ -92,7 +92,7 @@ main {
 
 .blog-preview-card:hover {
   box-shadow: 1rem 1rem var(--neutral-black);
-  cursor: pointer;
+  cursor: url(./assets/images/handcursor.svg), pointer;
 }
 
 .blog-preview-card:hover h2 {

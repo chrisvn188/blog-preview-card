@@ -82,9 +82,19 @@ main {
   border-radius: var(--round-lg);
   border: 1px solid var(--neutral-black);
   box-shadow: 0.5rem 0.5rem var(--neutral-black);
+  transition: all 0.3s ease;
+
   & > * + * {
     margin-top: 1.5rem;
   }
+}
+.blog-preview-card:hover {
+  box-shadow: 1rem 1rem var(--neutral-black);
+  cursor: url(./assets/images/cursor.svg), pointer;
+}
+
+.blog-preview-card:hover h2 {
+  color: var(--primary);
 }
 
 .blog-preview-card__content > * + * {

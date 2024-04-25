@@ -82,6 +82,7 @@ main {
   border-radius: var(--round-lg);
   border: 1px solid var(--neutral-black);
   box-shadow: 0.5rem 0.5rem var(--neutral-black);
+  animation: appear 0.3s ease;
   transition: all 0.3s ease;
 
   & > * + * {
@@ -95,6 +96,10 @@ main {
 
 .blog-preview-card:hover h2 {
   color: var(--primary);
+}
+
+.blog-preview-card:hover .blog-preview-card__category {
+  animation: shake 0.3s ease;
 }
 
 .blog-preview-card__content > * + * {
@@ -153,5 +158,37 @@ main {
     --r-text: 1rem;
     --sm-text: 0.875rem;
     --lg-text: 1.5rem;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-5deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

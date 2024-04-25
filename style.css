@@ -1,0 +1,147 @@
+@font-face {
+  font-family: Figtree;
+  src: url(./assets/fonts/Figtree-VariableFont_wght.ttf) format('truetype');
+}
+
+:root {
+  --primary: hsl(47, 88%, 63%);
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-grey: hsl(0, 0%, 50%);
+  --neutral-black: hsl(0, 0%, 7%);
+  --round-lg: 1.2rem;
+  --round: 1rem;
+  --round-sm: 4px;
+}
+/* css resets */
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--primary);
+  line-height: 1.5;
+  margin: 0;
+  font-family: Figtree, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* utility classes */
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+main {
+  min-height: 100dvh;
+  padding: 1.5rem;
+  display: grid;
+  place-content: center;
+}
+
+/* custom classes */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.blog-preview-card {
+  --lg-text: 1.25rem;
+  --r-text: 0.875rem;
+  --sm-text: 0.75rem;
+
+  max-width: 24rem;
+  background-color: var(--neutral-white);
+  padding: 1.4rem;
+  border-radius: var(--round-lg);
+  border: 1px solid var(--neutral-black);
+  box-shadow: 0.5rem 0.5rem var(--neutral-black);
+  & > * + * {
+    margin-top: 1.5rem;
+  }
+}
+
+.blog-preview-card__content > * + * {
+  margin-top: 1em;
+}
+
+.blog-preview-card__category {
+  display: inline-block;
+  font-size: var(--sm-text);
+  font-weight: 800;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--primary);
+  border-radius: var(--round-sm);
+}
+
+.blog-preview-card__publishdate {
+  font-size: var(--sm-text);
+  font-weight: 500;
+}
+
+.blog-preview-card h2 {
+  font-size: var(--lg-text);
+  font-weight: 800;
+}
+
+.blog-preview-card h2 + p {
+  font-size: var(--r-text);
+  font-weight: 500;
+  color: var(--neutral-grey);
+}
+
+.blog-preview-card__image {
+  height: 12.5rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--round);
+}
+
+.blog-preview-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+}
+
+.blog-preview-card__avatar {
+  width: 2rem;
+}
+
+.blog-preview-card__author {
+  font-size: var(--r-text);
+  font-weight: 800;
+}
+
+@media (min-width: 36rem) {
+  .blog-preview-card {
+    --r-text: 1rem;
+    --sm-text: 0.875rem;
+    --lg-text: 1.5rem;
+  }
+}
